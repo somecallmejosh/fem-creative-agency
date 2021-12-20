@@ -1,0 +1,28 @@
+<picture>
+  <source
+          :srcset="projects[activeProject - 1].desktopImg"
+          media="(min-width: 1024px)"
+          height="728"
+          width="895"
+        >
+    <source
+          :srcset="projects[activeProject - 1].tabletImg"
+          media="(min-width: 768px)"
+          height="438"
+          width="472"
+        >
+      <source
+          :srcset="projects[activeProject - 1].mobileImg"
+          media="(min-width: 100px)"
+          height="404"
+          width="375"
+        >
+        <img
+          :src="projects[activeProject - 1].desktopImg"
+          alt=""
+          class="relative z-0 w-full"
+          height="728"
+          width="895"
+          loading="lazy"
+        >
+        </picture>

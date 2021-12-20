@@ -1,0 +1,89 @@
+<div class="w-full">
+  <div class="md:grid md:grid-cols-6 md:grid-rows-3">
+    <div class="md:col-span-2 md:col-span-4 md:col-start-4 md:row-span-3 md:row-start-1">
+      <%= render '/page/main_image' %>
+    </div>
+    <div class="px-6 pt-16 pb-24 md:pl-10 lg:pl-32 lg:pr-0 md:flex md:items-center md:col-span-4 md:col-start-1 md:row-start-1 md:row-span-3 xl:col-span-3">
+      <div>
+        <h1 class="mb-6 font-extrabold text-40 md:text-56 lg:text-80">
+          Craft brewery <br>
+          website design agency
+        </h1>
+        <p class="mb-12 text-15 lg:text-18">We specialize in visual storytelling by creating cohesive brand and website design solutions for craft breweries, giving lasting impressions to audiences in a digital world.</p>
+        <div>
+          <a href="/" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="about" class="relative z-0 text-white bg-mc-black md:flex">
+    <div class="relative md:basis-51">
+      <%= render 'page/strategic_design_image' %>
+      <div aria-hidden="true" class="top-0 left-0 w-20 transform translate-x-1/2 -translate-y-1/2 lg:w-32 md:block md:left-auto md:right-0 md:absolute text-mc-red md:top-36 lg:top-56">
+        <%= render '/page/swirly' %>
+      </div>
+    </div>
+    <div class="px-6 py-16 md:basis-49 md:pt-32 md:pl-28 md:pr-20 lg:pr-32 lg:pt-56">
+      <h2 class="mb-6 font-extrabold text-32 lg:text-56">
+        <span class="text-mc-red">Design</span> is strategic.
+      </h2>
+      <p class="mb-12 text-15 lg:text-18">
+        “A well-crafted design strategy consistently produces desired outcomes and brand awareness. We are firm believers that success lies in creative collaboration with our clients.”
+      </p>
+      <div>
+        <a href="/" class="text-link">Schedule a Call</a>
+      </div>
+    </div>
+  </div>
+  <div class="relative z-10 text-white md:flex bg-mc-red">
+    <div class="z-20 px-6 pt-24 md:pt-32 md:bg-white md:basis-43 lg:basis-38 md:pl-10 md:pr-4 lg:pr-0 lg:pl-0">
+      <h2 class="font-extrabold md:mb-12 text-32 md:text-black lg:text-56 lg:transform lg:translate-x-32">
+        Our approach for creating a winning brand
+      </h2>
+    </div>
+    <div id="service" class="px-10 py-24 md:basis-57 lg:basis-62 bg-mc-red md:transform md:-translate-y-32 lg:-translate-y-48 lg:pl-72 lg:pr-20 md:px-16">
+      <ol class="space-y-20 list-style-none md:pt-16 lg:pt-32 lg:space-y-32">
+        <li class="relative space-y-4">
+          <h3 class="font-extrabold text-15 lg:text-20">Brand Strategy</h3>
+          <p class="text-15 lg:text-18">Brand strategy is critical for long-term success. Outshining competitors and capturing the target audience are key.</p>
+          <p aria-hidden="true" class="absolute pt-2 font-extrabold opacity-25 text-80 -top-16 -left-4 lg:-left-12">01</p>
+        </li>
+        <li class="relative space-y-4">
+          <h3 class="font-extrabold text-15 lg:text-20">Brand Design</h3>
+          <p class="text-15 lg:text-18">Keeping the brand design unique and meaningful helps in communicating the brand’s value effectively.</p>
+          <p aria-hidden="true" class="absolute pt-2 font-extrabold opacity-25 text-80 -top-16 -left-4 lg:-left-12">02</p>
+        </li>
+        <li class="relative space-y-4">
+          <h3 class="font-extrabold text-15 lg:text-20">Web Design</h3>
+          <p class="text-15 lg:text-18">A beautifully crafted website is the best tool for brand awareness, and ultimately results in increased revenues.</p>
+          <p aria-hidden="true" class="absolute pt-2 font-extrabold opacity-25 text-80 -top-16 -left-4 lg:-left-12">03</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div id="projects" class="w-full text-white md:flex">
+    <div class="relative md:basis-49 md:order-1">
+      <%= render '/page/project_image' %>
+      <div class="absolute bottom-0 right-0 z-10 w-full pt-20 pb-10 pr-10 text-right bg-gradient-to-t from-black to-transparent">
+        <p class="font-extrabold text-20" x-text="projects[activeProject - 1].projectName"></p>
+        <p class="text-15" x-text="projects[activeProject - 1].projectDescription"></p>
+      </div>
+    </div>
+    <div class="relative px-6 py-16 md:p-0 md:basis-51 md:order-0 bg-mc-black md:bg-white">
+      <div class="space-y-12 bg-mc-black md:py-24 md:pl-10 md:pr-16 lg:pl-32">
+        <h2 x-text="projects[activeProject - 1].title" class="text-3xl font-extrabold lg:text-6xl"></h2>
+        <div class="space-x-2">
+          <button @click="previousProject" aria-label="Previous slide" class="transition-all duration-200 text-mc-red hover:opacity-75">
+            <%= render '/page/previous' %>
+          </button>
+          <button @click="nextProject" aria-label="Next slide" class="transition-all duration-200 text-mc-red hover:opacity-75">
+            <%= render '/page/next' %>
+          </button>
+        </div>
+      </div>
+      <div aria-hidden="true" class="hidden w-20 text-white transform translate-x-1/2 lg:w-32 md:block md:right-0 md:absolute md:top-36">
+        <span class="flip-y"><%= render '/page/swirly' %></span>
+      </div>
+    </div>
+  </div>
+</div>
