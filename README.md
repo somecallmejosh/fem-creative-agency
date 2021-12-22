@@ -32,3 +32,7 @@ Running the project locally
 
 - Terminal 1: `rails s`
 - Terminal 2: `rails tailwindcss:watch`
+
+Dealing with Linux platform issues on heroku:
+
+- https://github.com/rubygems/rubygems/issues/4269
