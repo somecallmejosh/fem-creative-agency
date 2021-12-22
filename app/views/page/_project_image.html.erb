@@ -1,28 +1,34 @@
-<picture>
-  <source
-          :srcset="projects[activeProject - 1].desktopImg"
+<template x-for="image in projects">
+  <picture>
+    <source
+          :srcset="image.desktopImg"
           media="(min-width: 1024px)"
           height="728"
           width="895"
         >
-    <source
-          :srcset="projects[activeProject - 1].tabletImg"
+      <source
+          :srcset="image.tabletImg"
           media="(min-width: 768px)"
           height="438"
           width="472"
         >
-      <source
-          :srcset="projects[activeProject - 1].mobileImg"
+        <source
+          :srcset="image.mobileImg"
           media="(min-width: 100px)"
           height="404"
           width="375"
         >
-        <img
-          :src="projects[activeProject - 1].desktopImg"
-          alt=""
-          class="relative z-0 w-full"
+          <img
+          :src="image.desktopImg"
+          :alt="image.title"
+          class="relative z-0 w-full bg-black"
           height="728"
           width="895"
           loading="lazy"
+          x-show="image.id === activeProject"
+          x-transition:enter="transition ease-in duration-500"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
         >
-        </picture>
+          </picture>
+        </template>

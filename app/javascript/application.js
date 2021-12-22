@@ -3,14 +3,13 @@ import '@hotwired/turbo-rails'
 import 'controllers'
 
 document.addEventListener('alpine:init', () => {
-  console.log('Alpine is ready!')
   Alpine.data('ui', () => ({
     menuOpen: false,
     activeMenuItem: '',
-    activeProject: 1,
+    activeProject: 0,
     projects: [
       {
-        id: 1,
+        id: 0,
         title: 'Brand naming & guidelines',
         projectName: 'Lean Product Roadmap',
         projectDescription: '2019 Project',
@@ -22,7 +21,7 @@ document.addEventListener('alpine:init', () => {
           'https://res.cloudinary.com/dwjulenau/image/upload/v1639924502/Micro%20Craft%20Creative/desktop/image-slide-1.jpg',
       },
       {
-        id: 2,
+        id: 1,
         title: 'Brand identity & merchandise',
         projectName: 'New Majest Hotel',
         projectDescription: '2018 Project',
@@ -34,7 +33,7 @@ document.addEventListener('alpine:init', () => {
           'https://res.cloudinary.com/dwjulenau/image/upload/v1639924501/Micro%20Craft%20Creative/desktop/image-slide-2.jpg',
       },
       {
-        id: 3,
+        id: 2,
         title: 'Brand identity & web design',
         projectName: 'Crypot Dashboard',
         projectDescription: '2016 Project',
@@ -55,13 +54,13 @@ document.addEventListener('alpine:init', () => {
     previousProject() {
       this.activeProject = this.activeProject - 1
       if (this.activeProject < 1) {
-        this.activeProject = this.projectsLength()
+        this.activeProject = this.projectsLength() - 1
       }
     },
     nextProject() {
       this.activeProject = this.activeProject + 1
-      if (this.activeProject > this.projectsLength()) {
-        this.activeProject = 1
+      if (this.activeProject > this.projectsLength() - 1) {
+        this.activeProject = 0
       }
     },
   }))
