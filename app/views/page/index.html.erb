@@ -44,32 +44,32 @@
     <div id="service" class="px-10 py-24 md:basis-57 lg:basis-62 bg-mc-red md:transform md:-translate-y-32 lg:-translate-y-48 lg:pl-72 lg:pr-20 md:px-16">
       <ol class="space-y-20 list-style-none md:pt-16 lg:pt-32 lg:space-y-32">
         <li class="relative space-y-4">
-          <h3 x-intersect="$el.classList.add('fadeInUp')" class="font-extrabold text-15 lg:text-20">Brand Strategy</h3>
-          <p x-intersect="$el.classList.add('fadeInUp')" class="text-15 lg:text-18">Brand strategy is critical for long-term success. Outshining competitors and capturing the target audience are key.</p>
+          <h3 x-intersect="$el.classList.add('fadeInUpLarge')" class="font-extrabold text-15 lg:text-20">Brand Strategy</h3>
+          <p x-intersect="$el.classList.add('fadeInUpLarge')" class="text-15 lg:text-18">Brand strategy is critical for long-term success. Outshining competitors and capturing the target audience are key.</p>
           <p aria-hidden="true" class="absolute pt-2 font-extrabold opacity-25 text-80 -top-16 -left-4 lg:-left-12">01</p>
         </li>
         <li class="relative space-y-4">
-          <h3 x-intersect="$el.classList.add('fadeInUp')" class="font-extrabold text-15 lg:text-20">Brand Design</h3>
-          <p x-intersect="$el.classList.add('fadeInUp')" class="text-15 lg:text-18">Keeping the brand design unique and meaningful helps in communicating the brand’s value effectively.</p>
+          <h3 x-intersect="$el.classList.add('fadeInUpLarge')" class="font-extrabold text-15 lg:text-20">Brand Design</h3>
+          <p x-intersect="$el.classList.add('fadeInUpLarge')" class="text-15 lg:text-18">Keeping the brand design unique and meaningful helps in communicating the brand’s value effectively.</p>
           <p aria-hidden="true" class="absolute pt-2 font-extrabold opacity-25 text-80 -top-16 -left-4 lg:-left-12">02</p>
         </li>
         <li class="relative space-y-4">
-          <h3 x-intersect="$el.classList.add('fadeInUp')" class="font-extrabold text-15 lg:text-20">Web Design</h3>
-          <p x-intersect="$el.classList.add('fadeInUp')" class="text-15 lg:text-18">A beautifully crafted website is the best tool for brand awareness, and ultimately results in increased revenues.</p>
+          <h3 x-intersect="$el.classList.add('fadeInUpLarge')" class="font-extrabold text-15 lg:text-20">Web Design</h3>
+          <p x-intersect="$el.classList.add('fadeInUpLarge')" class="text-15 lg:text-18">A beautifully crafted website is the best tool for brand awareness, and ultimately results in increased revenues.</p>
           <p aria-hidden="true" class="absolute pt-2 font-extrabold opacity-25 text-80 -top-16 -left-4 lg:-left-12">03</p>
         </li>
       </ol>
     </div>
   </div>
-  <div id="projects" class="w-full text-white md:flex">
-    <div class="relative md:basis-49 md:order-1">
+  <div id="projects" class="relative w-full text-white md:flex">
+    <div class="relative z-0 md:basis-49 md:order-1">
       <%= render '/page/project_image' %>
       <div class="absolute bottom-0 right-0 z-10 w-full pt-20 pb-10 pr-10 text-right bg-gradient-to-t from-black to-transparent">
         <p x-intersect="$el.classList.add('fadeInUp')" class="font-extrabold text-20" x-text="projects[activeProject].projectName"></p>
         <p x-intersect="$el.classList.add('fadeInUp')" class="text-15" x-text="projects[activeProject].projectDescription"></p>
       </div>
     </div>
-    <div class="relative px-6 py-16 md:p-0 md:basis-51 md:order-0 bg-mc-black md:bg-white">
+    <div class="relative z-20 px-6 py-16 md:p-0 md:basis-51 md:order-0 bg-mc-black md:bg-white ">
       <div class="space-y-12 bg-mc-black md:py-24 md:pl-10 md:pr-16 lg:pl-32">
         <h2 x-intersect="$el.classList.add('fadeInUp')" x-text="projects[activeProject].title" class="text-3xl font-extrabold lg:text-6xl"></h2>
         <div class="space-x-2">
@@ -81,7 +81,7 @@
           </button>
         </div>
       </div>
-      <div aria-hidden="true" class="hidden w-20 text-white transform translate-x-1/2 lg:w-32 md:block md:right-0 md:absolute md:top-36">
+      <div aria-hidden="true" class="z-10 hidden w-20 text-white transform translate-x-1/2 lg:w-32 md:block md:right-0 md:absolute md:top-36">
         <span class="flip-y"><%= render '/page/swirly' %></span>
       </div>
     </div>
